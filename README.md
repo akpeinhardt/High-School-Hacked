@@ -5,7 +5,7 @@ This repository is for solutions to common math and physics problems faced by hi
 As the repository grows, a larger structure will be imposed. For now, one directory per example will suffice. 
 
 # Contributing
-This is an excellent repository for quick and easy contributions, as well as people new to contributing on github or new to a particular programming language. Have an idea for how to solve a problem? Fork the repository, write up your solution in a well named directory, and file a pull request! 
+This is an excellent repository for quick and easy contributions, as well as people new to contributing on github or new to a particular programming language. Have an idea for how to solve a problem? File an issue to discuss it. If you're sure it's a good idea, fork the repository, write up your solution in a well named directory, and file a pull request! 
 
 Because this library is meant as a teaching tool, tests and comments are very appreciated. The target audience here is students who may or may not have programming experience, so comments that seem unnecessary to a software developer or experienced programmer can be very useful to a student. Comments are also a great place to explain the math/physics/etc. behind the program should you choose to do so.
 
