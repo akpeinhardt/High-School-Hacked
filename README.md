@@ -7,7 +7,7 @@ As the repository grows, a larger structure will be imposed. For now, one direct
 # Contributing
 This is an excellent repository for quick and easy contributions, as well as people new to contributing on github or new to a particular programming language. Have an idea for how to solve a problem? Fork the repository, write up your solution in a well named directory, and file a pull request! 
 
-Because this library is meant as a teaching tool, tests and comments are very appreciated. The target audience here is students who may or may not have programming experience, so comments that seem unnecessary to a softare developer or experienced programmer can be very useful to a student. Comments are also a great place to explain the math/physics/etc. behind the program should you choose to do so.
+Because this library is meant as a teaching tool, tests and comments are very appreciated. The target audience here is students who may or may not have programming experience, so comments that seem unnecessary to a software developer or experienced programmer can be very useful to a student. Comments are also a great place to explain the math/physics/etc. behind the program should you choose to do so.
 
 This repository is language agnostic, so please feel free to write examples in the programming language of your choice! Examples with implementations in multiple languages are especially helpful, as they allow students to compare modern programming tools.
 
