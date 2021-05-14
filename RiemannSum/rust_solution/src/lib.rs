@@ -1,7 +1,7 @@
 /// This module contains a structure for calculating left, right, and midpoint riemann sums.
 
 // "struct" is short for structure. A struct in rust is basically
-// just a big glob information. If you're coming from another programming
+// just a big glob information. If you're coming from another programming language
 // this is often called an "object" or a "record"
 //
 // For our riemann sum, the information
@@ -17,7 +17,7 @@
 //
 // The 'pub' keyword just means public. It's there so other people can use our struct
 pub struct RiemannSum {
-    func: fn(f64) -> f64,
+    func: fn(f64) -> f64, // This is a pointer to a function which takes a 64 bit floating point number and returns a 64 bit floating point number
     x0: f64,
     xf: f64,
     n: u64,
@@ -25,7 +25,7 @@ pub struct RiemannSum {
 }
 
 // "enum" is short for enumeration. Enums in programming are often a
-// convenient ways to define a set number of options. In rust, enums
+// convenient way to define a set number of options/types. In rust, enums
 // are much more powerful than this, but all we need is a simple one
 pub enum Method {
     Right,
@@ -34,7 +34,7 @@ pub enum Method {
 }
 
 // "impl" is short for Implementation. This is where we can write behavior associated with our big
-// globs of information. You can also write behavior that is associated with more than one struct
+// globs of information. You can also write behavior that is associated with more than one kind of struct
 // using "traits", but we don't need that for our calculator.
 impl RiemannSum {
     // This function is what's often called a 'constructor'. It takes in all the info we need
@@ -73,15 +73,22 @@ impl RiemannSum {
             Method::Right => self.x0 + interval,
         };
 
-        // We need to add up n rectangles
+        // We need to add up n rectangles, so we do a loop counting from 0..(n-1). Notice the first term is included but the second one is excluded
         for _ in 0..self.n {
             // The area of a rectangle is its height (func(eval_at)) * its width (interval)
+            // The weird (self.func)(eval_at) is actually calling the function func with eval_at as the input
+            // We store a pointer to the function in the struct, but if we write self.func(eval_at), the
+            // compiler thinks we're calling a method called func. The parenthesis around (self.func) make it clear
+            // that func is an attribute rather than a method.
             total_area += (self.func)(eval_at) * interval;
 
             // After calculating the area of our rectangle, we increase x by the width of the ractangle to take us to the next one
             eval_at += interval;
         }
 
+        // In rust, any variable that isn't supressed with a semi-colon is returned.
+        // This is because everything in rust is an "expression". You can read more about this
+        // in the rust book.
         total_area
     }
 }
