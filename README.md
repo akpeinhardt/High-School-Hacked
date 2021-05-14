@@ -11,3 +11,5 @@ Because this library is meant as a teaching tool, tests and comments are very ap
 
 This repository is language agnostic, so please feel free to write examples in the programming language of your choice! Examples with implementations in multiple languages are especially helpful, as they allow students to compare modern programming tools.
 
+# Requests
+If you are an educator and would like to request a programmatic solution to a particular problem or problem set, please feel free to file an Issue with a detailed description of what you are looking for. 
